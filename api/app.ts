@@ -11,6 +11,7 @@ import encryptionRoutes from './routes/encryption.js'
 import logRoutes from './routes/logs.js'
 import clientRoutes from './routes/clients.js'
 import eventRoutes from './routes/events.js'
+import healthRoutes from './routes/health.js'
 
 dotenv.config()
 
@@ -27,16 +28,7 @@ app.use('/api/encryption', encryptionRoutes)
 app.use('/api/logs', logRoutes)
 app.use('/api/clients', clientRoutes)
 app.use('/api/events', eventRoutes)
-
-app.use(
-  '/api/health',
-  (req: Request, res: Response): void => {
-    res.status(200).json({
-      success: true,
-      message: 'ok',
-    })
-  },
-)
+app.use('/api/health', healthRoutes)
 
 app.use((error: Error, req: Request, res: Response) => {
   res.status(500).json({

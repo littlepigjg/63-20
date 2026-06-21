@@ -67,6 +67,16 @@ body {
   50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
 }
 
+@keyframes pulse-danger {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+}
+
+@keyframes pulse-warning {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+}
+
 @keyframes flash-success {
   0% { background-color: rgba(16, 185, 129, 0.3); }
   100% { background-color: transparent; }
@@ -77,8 +87,31 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
 .animate-pulse-glow {
   animation: pulse-glow 2s infinite;
+}
+
+.animate-pulse-danger {
+  animation: pulse-danger 1.5s infinite;
+}
+
+.animate-pulse-warning {
+  animation: pulse-warning 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
 }
 
 .animate-flash-success {
@@ -87,4 +120,8 @@ body {
 
 .animate-slide-in {
   animation: slide-in 0.15s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
 }

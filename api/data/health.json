@@ -1,0 +1,15 @@
+{
+  "config": {
+    "heartbeatRegularityWeight": 40,
+    "onlineDurationWeight": 30,
+    "errorLogWeight": 30,
+    "heartbeatIntervalMs": 30000,
+    "offlineThresholdMs": 60000,
+    "observationPeriodHours": 24,
+    "minHealthyScore": 80,
+    "warningScore": 60,
+    "criticalScore": 40,
+    "historyRetentionDays": 7
+  },
+  "history": []
+}
